@@ -1,3 +1,11 @@
+:root {
+  --brown: #54332B;
+  --red: #943636;
+  --orange: #b16a2f;
+  --yellow: #CEA05A;
+  --green: #5F5949;
+}
+
 /* Базовые стили для приложения */
 .App {
   max-width: 1200px;
@@ -22,7 +30,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--yellow);
   text-decoration: none;
 }
 
@@ -32,7 +40,7 @@
 
 /* Стили для компонента Greeting */
 .greeting {
-  background: linear-gradient(135deg, #6498AF 0%, #5D6474 100%);
+  background: linear-gradient(135deg, var(--orange) 0%, var(--red) 100%);
   color: white;
   padding: 30px;
   border-radius: 10px;
@@ -78,13 +86,13 @@
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #6498AF;
+  border: 3px solid var(--green);
 }
 
 .avatar-section p {
   margin-top: 10px;
   font-size: 0.9em;
-  color: #666;
+  color: var(--brown);
 }
 
 .user-info h3 {
@@ -129,13 +137,13 @@
 }
 
 .task-list li.completed {
-  background-color: #ECEDE6;
-  border-left: 4px solid #6498AF;
+  background-color: #ececec;
+  border-left: 4px solid var(--green);
 }
 
 .task-list li.pending {
-  background-color: #ECEDE6;
-  border-left: 4px solid #A7A6B0;
+  background-color: #ececec;
+  border-left: 4px solid var(--orange);
 }
 
 .task-list li:hover {
@@ -145,4 +153,123 @@
 .task-list span {
   flex: 1;
   color: #333;
+}
+
+/* счётчик ПР 20 */
+
+.counter {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.counter-buttons {
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.counter-buttons button{
+  background-color: var(--orange);
+  padding: 5px;
+  margin: 0 0 0 5px;
+  border-radius: 5px;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.counter-buttons button:hover{
+  transform: translateY(-2px);
+}
+
+
+/* стили для компонента RegistrationForm */
+.registration-form {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h2 {
+  margin: 0 0 20px 0;
+  color: var(--brown);
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--orange);
+}
+
+.registration-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.registration-form button {
+  background-color: var(--brown);
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.registration-form button:hover {
+  background-color: var(--orange);
+}
+
+
+/* стили для компонента ColorPicker */
+.color-picker {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+.color-picker h2 {
+  margin: 0 0 20px 0;
+  color: var(--brown);
+}
+
+.color-display {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.color-controls h3{
+  margin: 0 0 10px 0;
+  color: var(--orange)
+}
+
+.color-buttons button{
+  margin: 0 10px 0 0;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: filter 0.2s, box-shadow 0.2s;
+}
+
+.color-buttons button:hover{
+  filter: brightness(1.2);
+}
+
+.color-buttons button.active{
+  box-shadow: 0px 0px 15px var(--yellow);
 }
